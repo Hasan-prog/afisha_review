@@ -1,0 +1,367 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 500;
+}
+h2.section-title {
+    margin-bottom: 30px;
+}
+h5 {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+p.caption {
+    font-size: 14px;
+    line-height: 40px;
+    color: #999;
+    margin: 0;
+}
+p.footnote {
+    font-size: 12px;
+    color: #555;
+}
+
+
+
+.item {
+    margin-top: 30px;
+}
+.item-info {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    height: fit-content;
+}
+.item-info .img-box {
+    position: relative;
+    min-width: 71px;
+    height: 102px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.item-info .img-box img {
+    width: 71px;
+    height: auto;
+}
+.item-info p {
+    line-height: 19px;
+    color: #777;
+    /* width: 272px; */
+    margin: 0;
+}
+.item-info h5 p {
+    color: #A7A7A7;
+}
+
+
+.label {
+    line-height: 40px;
+    min-width: 80px;
+    min-height: 40px;
+    left: 833px;
+    top: 1914px;
+    background: #F5F5F5;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px 10px 0;
+}
+
+.hall {
+    display: flex;
+    height: fit-content;
+    column-gap: 56px;
+    margin-bottom: 20px;
+}   
+.halls-info .hall-number {
+    min-width: 150px;
+    color: #777;
+}
+
+.seperator {
+    width: 100%;
+    height: 1px;
+    background: #eee;
+}
+
+.film-3d {
+    padding: 8px;
+    background: #fff;
+    color: #333;
+    border-radius: 50%;
+    margin-left: 6px;
+    box-shadow: 0px 5px 20px rgba(193,193,193,0.4);
+}
+.film-2d {
+    padding: 8px;
+    background: #F5F5F5;
+    color: #333;
+    border-radius: 50%;
+    margin-left: 6px;
+}
+
+.item-info .description .highlight {
+    line-height: 30px;
+}
+
+
+#film-afisha h5 {
+    margin: 6px 0;
+}
+#film-afisha .content p {
+    font-size: 14px;
+    color: #555;
+}
+#film-afisha .address {
+    line-height: 30px;
+    margin-top: 5px;
+    display: inline-block;
+    margin-right: 10px;
+}
+#film-afisha .address span {
+    margin-right: 8px;
+}
+#film-afisha .address span svg {
+    display: inline-block;
+    margin-top: -3px;
+}
+
+
+
+.add-favorite {
+    cursor: pointer;
+}
+.add-favorite svg {
+    stroke: #555;
+    display: inline-block;
+    margin-top: -5px;
+}
+.addFavorite {
+    -webkit-animation-name: addFavorite;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+  }
+@-webkit-keyframes addFavorite {
+    from {
+        fill: transparent;
+        transform: scale(0);
+    }
+    to {
+        fill: #F22B1D;
+        stroke: #F22B1D;
+        transform: scale(1);
+    }
+}
+
+.removeFavorite {
+    -webkit-animation-name: removeFavorite;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes removeFavorite {
+    from {
+        fill: #F22B1D;
+    }
+    to {
+        fill: transparent;
+        stroke: #555555;
+    }
+}
+
+
+.top-bar {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 1px 0 0 #eee;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+.top-bar h2 {
+    margin: 0;
+}
+.top-bar .close-wrap {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.top-bar .close-wrap:active {
+    background-color: #f5f5f5;
+}
+
+
+
+/* MEDIA QUIRES */
+
+@media (min-width: 768px) {
+    .show-on-mob {
+        display: none!important;
+    }
+    #cinema-afisha .item-info .description {
+        display: none;
+    }
+    .top-bar {
+        display: none;
+    }
+    .afisha-wrap {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .afisha-wrap {
+        position: absolute;
+        top: 0;
+        transition: 1s;
+        display: none;
+        padding-top: 60px;
+        left: 100%;
+        background: #fff;
+        z-index: 7;
+    }
+
+    .item-info {
+        column-gap: 0;
+    }
+    .item-info .img-box {
+        margin-right: 20px;
+    }
+
+    .showAfishaWrap {
+        -webkit-animation-name: showAfishaWrap;
+        -webkit-animation-duration: 0.18s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: ease-out;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    @-webkit-keyframes showAfishaWrap {
+        from {
+            left: 100%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    .hideAfishaWrap {
+        -webkit-animation-name: hideAfishaWrap;
+        -webkit-animation-duration: 0.18s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: ease-out;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    @-webkit-keyframes hideAfishaWrap {
+        from {
+            left: 0;
+        }
+        to {
+            left: 100%;
+        }
+    }
+
+    .hide-on-mob {
+        display: none;
+    }
+    h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    h5 {
+        font-size: 17px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .collapse-afisha-wrap {
+        position: fixed;
+        font-size: 16px;
+        font-weight: 500;
+        background: #FFD748;
+        color: #000;
+        width: 100vw;
+        height: 50px;
+        border: none;
+        border-radius: 0;
+        bottom: 0;
+        z-index: 6;
+    }
+    .collapse-afisha-wrap:active {
+        background: #dbb733!important;
+        color: #000!important;
+    }
+    .collapse-afisha-wrap:hover {   
+        background: #dbb733!important;
+        color: #000!important;
+    }
+    .collapse-afisha-wrap:focus {
+        background: #dbb733!important;
+        color: #000!important;
+    }
+
+
+    .item-info {
+        margin-bottom: 20px;
+    }
+    .item-info p {
+        margin-bottom: 8px;
+    }
+    .item-info .description {
+        color: #555;
+    }
+
+    .halls-info .hall-number {
+        min-width: auto;
+        margin-bottom: 12px;
+    }
+    .hall {
+        display: block;
+    }
+    .item-info .img-box {
+        min-width: 91px;
+        height: auto;
+    }
+    .item-info .img-box img {
+        width: 91px;
+    }
+
+    .label {
+        line-height: 32px;
+        min-height: 32px;
+        min-width: 70px;
+    }
+
+
+}
